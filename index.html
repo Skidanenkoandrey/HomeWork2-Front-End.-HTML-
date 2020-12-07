@@ -109,6 +109,36 @@
         </div>
     </div>
 </div>
+
+<div class="form-wrapper">
+    <div class="container">
+        <form class="registration" method="get">
+            <fieldset class="registration__group">
+                <legend class="registration__title">Форма</legend>
+                <div class="group-name">
+                    <div class="group-name__item first-name">
+                        <label class="name" for="name">Имя</label>
+                        <input id="name" type="text" required placeholder="Введите Ваше имя">
+                    </div>
+                    <div class="group-name__item last-name">
+                        <label class="surname" for="surname">Фамилия</label>
+                        <input id="surname" type="text" required placeholder="Введите Вашу фамилию">
+                    </div>
+                </div>
+                <div class="group-cities">
+                    <label for="city">Choose your city</label>
+                    <select id="city">
+                        <option selected value="Выберите город" disabled>Выберите город</option>
+                        <option value="Kyiv">Kyiv</option>
+                        <option value="Lviv">Lviv</option>
+                        <option value="Dnipro">Dnipro</option>
+                        <option value="Kherson">Kherson</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>

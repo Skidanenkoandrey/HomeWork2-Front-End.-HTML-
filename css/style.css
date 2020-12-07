@@ -78,15 +78,15 @@ body {
     color: #B06C55;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .table-wrapper {
         overflow-x: auto;
     }
+
     .table {
         padding: 0 20px;
     }
 }
-
 
 
 .form-wrapper {
@@ -97,5 +97,69 @@ body {
 .title-form {
     margin-bottom: 50px;
     text-align: center;
+}
+
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.registration input {
+    padding: 5px 2px;
+    border: none;
+    outline: 2px solid transparent;
+}
+
+.registration input:focus {
+    border: none;
+    outline: 2px solid #3e4042;
+}
+
+
+
+
+
+.registration__group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 20px;
+    border-top: 2px solid #3e4042;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.registration__title {
+    padding: 0 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.group-name {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.group-name__item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    max-width: 220px;
+}
+
+.name,
+.surname {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFE91A;
 }
 
