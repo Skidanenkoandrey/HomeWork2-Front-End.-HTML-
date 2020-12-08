@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HomeWork#2</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
@@ -112,21 +114,34 @@
 
 <div class="form-wrapper">
     <div class="container">
-        <form class="registration" method="get">
+        <form class="registration" method="post">
             <fieldset class="registration__group">
                 <legend class="registration__title">Форма</legend>
                 <div class="group-name">
-                    <div class="group-name__item first-name">
-                        <label class="name" for="name">Имя</label>
-                        <input id="name" type="text" required placeholder="Введите Ваше имя">
+                    <div class="group-name__item">
+                        <label class="first-name" for="name">Имя</label>
+                        <input id="name" name="name" type="text" required placeholder="Введите Ваше имя">
                     </div>
-                    <div class="group-name__item last-name">
-                        <label class="surname" for="surname">Фамилия</label>
-                        <input id="surname" type="text" required placeholder="Введите Вашу фамилию">
+                    <div class="group-name__item">
+                        <label class="last-name" for="surname">Фамилия</label>
+                        <input id="surname" name="surname" type="text" required placeholder="Введите Вашу фамилию">
                     </div>
                 </div>
+
+                <div class="group-gender">
+                    <h3 class="group-gender__title">Какой Ваш пол?</h3>
+                    <div class="group-gender__male">
+                        <label class="male" for="male">Мужчина</label>
+                        <input id="male" name="gender" value="male" type="radio" checked>
+                    </div>
+                    <div class="group-gender__female">
+                        <label class="female" for="female">Женщина</label>
+                        <input id="female" name="gender" value="female" type="radio">
+                    </div>
+                </div>
+
                 <div class="group-cities">
-                    <label for="city">Choose your city</label>
+                    <label class="group-cities__title" for="city">Выберите Ваш город</label>
                     <select id="city">
                         <option selected value="Выберите город" disabled>Выберите город</option>
                         <option value="Kyiv">Kyiv</option>
@@ -135,10 +150,31 @@
                         <option value="Kherson">Kherson</option>
                     </select>
                 </div>
+                <div class="group-additional-information">
+                    <label class="group-additional-information__title" for="comment">Дополнительная иформация</label>
+                    <textarea class="group-additional-information__area" id="comment" name="additional-information"
+                              placeholder="Напишите дополнительную информацию"></textarea>
+                </div>
+                <div class="group-languages">
+                    <h3 class="group-languages__title">Выбор языка:</h3>
+                    <div class="group-languages__item">
+                        <label class="group-languages__lang" for="ua">Українська</label>
+                        <input type="checkbox" name="language" id="ua">
+                    </div>
+                    <div class="group-languages__item">
+                        <label class="group-languages__lang" for="ru">Русский</label>
+                        <input type="checkbox" name="language" id="ru">
+                    </div>
+                    <div class="group-languages__item">
+                        <label class="group-languages__lang" for="eng">English</label>
+                        <input type="checkbox" name="language" id="eng">
+                    </div>
+                </div>
             </fieldset>
             <button type="submit">Отправить</button>
         </form>
     </div>
+
 </div>
 </body>
 </html>

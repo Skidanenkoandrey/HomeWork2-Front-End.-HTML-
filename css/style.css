@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     background: #18191A;
     color: #fff;
+    font-family: 'Cardo', serif;
 }
 
 
@@ -110,23 +111,20 @@ body {
 .registration input {
     padding: 5px 2px;
     border: none;
-    outline: 2px solid transparent;
+    border: 0;
 }
 
 .registration input:focus {
-    border: none;
-    outline: 2px solid #3e4042;
+    outline: 0px;
 }
-
-
-
 
 
 .registration__group {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 50px 20px;
+    padding: 30px 20px;
     border-top: 2px solid #3e4042;
     border-right: none;
     border-left: none;
@@ -142,7 +140,7 @@ body {
 
 
 .group-name {
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -155,11 +153,117 @@ body {
     max-width: 220px;
 }
 
-.name,
-.surname {
+.first-name,
+.last-name {
     margin-bottom: 5px;
     font-size: 1rem;
     font-weight: bold;
     color: #FFE91A;
 }
 
+.group-gender,
+.group-cities {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+    max-width: 160px;
+}
+
+
+.group-gender__male,
+.group-gender__female {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.male,
+.female {
+    margin-left: 5px;
+}
+
+.group-gender__title,
+.group-cities__title {
+    font-size: 1rem;
+    color: #FFE91A;
+    font-weight: bold;
+}
+
+.group-cities__title {
+    margin-bottom: 5px;
+}
+
+
+.group-additional-information {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin: 50px 0 20px 0;
+}
+
+.group-additional-information__area {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+.group-additional-information__title,
+.group-languages__title {
+    font-size: 1rem;
+    color: #FFE91A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.group-languages {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 20px 80px;
+}
+
+.group-languages__item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.group-languages__lang {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 1024px){
+    .group-name,
+    .group-gender,
+    .group-cities,
+    .group-additional-information,
+    .group-languages {
+        width: 100%;
+    }
+
+    .group-name {
+        justify-content: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .group-name__item:first-child {
+        margin-right: 15px;
+    }
+
+    .group-gender,
+    .group-cities {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .group-additional-information {
+        margin: 0 0 20px 0;
+    }
+
+    .group-languages {
+        margin: 0 0 20px;
+    }
+
+}
